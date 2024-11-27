@@ -66,22 +66,35 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Open Graph Metadata for Facebook and Instagram */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content={DATA.name} />
         <meta property="og:description" content={DATA.description} />
         <meta property="og:image" content="https://www.sanskarbasnet.me/thumbnail.png" />
+        <meta property="og:image:alt" content={`${DATA.name} - Thumbnail`} />
         <meta property="og:url" content={DATA.url} />
         <meta property="og:site_name" content={DATA.name} />
         <meta property="og:locale" content="en_US" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
 
-        {/* Twitter metadata */}
+        {/* Twitter Metadata */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={DATA.name} />
         <meta name="twitter:description" content={DATA.description} />
         <meta name="twitter:image" content="https://www.sanskarbasnet.me/thumbnail.png" />
 
-        {/* Optional: Add viewport meta tag for responsiveness */}
+        {/* Facebook Debugging/Testing */}
+        <meta property="fb:app_id" content="your_facebook_app_id" /> {/* Optional: Add if you have a Facebook app */}
+
+        {/* Basic Meta Tags */}
+        <meta name="description" content={DATA.description} />
+        <meta name="author" content="Your Name" />
+        <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" />
       </head>
       <body
         className={cn(
