@@ -4,8 +4,8 @@ import { HomeIcon, NotebookIcon } from "lucide-react";
 export const DATA = {
   name: "Sanskar Basnet",
   initials: "SB",
-  url: "https://dillion.io",
-  location: "San Francisco, CA",
+  url: "https://sanskarbasnet.me",
+  location: "Dundee, United Kingdom",
   locationLink: "https://www.google.co.uk/maps/place/Dundee",
   description:
     "I'm a third-year Computing Science student at the University of Dundee, passionate about building innovative software solutions with skills in Java, ReactJS, and algorithm design.",
@@ -59,7 +59,7 @@ export const DATA = {
       },
       email: {
         name: "Send Email",
-        url: "sanskarbasnetitahari@gmail.com",
+        url: "mailto:sanskarbasnetitahari@gmail.com",
         icon: Icons.email,
 
         navbar: true,
