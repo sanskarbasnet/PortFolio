@@ -22,10 +22,24 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${DATA.name}`,
     description: DATA.description,
-    url: "/public/thumbnail.png",
+    url: DATA.url, // Base URL of your site
     siteName: `${DATA.name}`,
+    images: [
+      {
+        url: "/public/thumbnail.png", // Correct path to your thumbnail
+        width: 1200,
+        height: 630,
+        alt: `${DATA.name} - Thumbnail`,
+      },
+    ],
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    title: `${DATA.name}`,
+    description: DATA.description,
+    card: "summary_large_image",
+    images: ["/public/thumbnail.png"], // Thumbnail for Twitter
   },
   robots: {
     index: true,
@@ -37,10 +51,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  twitter: {
-    title: `${DATA.name}`,
-    card: "summary_large_image",
   },
   verification: {
     google: "",
@@ -55,6 +65,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={DATA.name} />
+        <meta property="og:description" content={DATA.description} />
+        <meta property="og:image" content="/public/thumbnail.png" />
+        <meta property="og:url" content={DATA.url} />
+        <meta property="og:site_name" content={DATA.name} />
+        <meta property="og:locale" content="en_US" />
+
+        {/* Twitter metadata */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={DATA.name} />
+        <meta name="twitter:description" content={DATA.description} />
+        <meta name="twitter:image" content="/public/thumbnail.png" />
+
+        {/* Optional: Add viewport meta tag for responsiveness */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
