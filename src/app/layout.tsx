@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: `${DATA.name}`,
     images: [
       {
-        url: "/public/thumbnail.png", // Correct path to your thumbnail
+        url: "/thumbnail.png", // Correct path to your thumbnail
         width: 1200,
         height: 630,
         alt: `${DATA.name} - Thumbnail`,
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: `${DATA.name}`,
     description: DATA.description,
     card: "summary_large_image",
-    images: ["/public/thumbnail.png"], // Thumbnail for Twitter
+    images: ["/thumbnail.png"], // Thumbnail for Twitter
   },
   robots: {
     index: true,
@@ -69,7 +69,7 @@ export default function RootLayout({
         <meta property="og:type" content="website" />
         <meta property="og:title" content={DATA.name} />
         <meta property="og:description" content={DATA.description} />
-        <meta property="og:image" content="/public/thumbnail.png" />
+        <meta property="og:image" content="/thumbnail.png" />
         <meta property="og:url" content={DATA.url} />
         <meta property="og:site_name" content={DATA.name} />
         <meta property="og:locale" content="en_US" />
@@ -78,7 +78,7 @@ export default function RootLayout({
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={DATA.name} />
         <meta name="twitter:description" content={DATA.description} />
-        <meta name="twitter:image" content="/public/thumbnail.png" />
+        <meta name="twitter:image" content="/thumbnail.png" />
 
         {/* Optional: Add viewport meta tag for responsiveness */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
