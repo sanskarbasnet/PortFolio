@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${DATA.name}`,
     description: DATA.description,
-    url: "/thumbnail.png",
+    url: "/public/thumbnail.png",
     siteName: `${DATA.name}`,
     locale: "en_US",
     type: "website",
