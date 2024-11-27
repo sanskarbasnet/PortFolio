@@ -160,7 +160,7 @@ export const DATA = {
     {
       title: "Battleship Game",
       href: "https://github.com/sanskarbasnet/BattleShip-Game.git",
-      dates: "April 2023 - March 2024",
+      dates: "April 2023 - March 2023",
       active: true,
       description:
         "I developed a Battleship Game in JavaFX, featuring both single-player and multiplayer modes. The game includes engaging animations, a user-friendly interface, and intuitive gameplay mechanics. I applied object-oriented principles to structure the game logic and ensured smooth functionality through careful UI design. Balancing this project with academic commitments, I focused on rigorous testing and refinement to deliver a seamless user experience. This project highlights my skills in game development, UI design, and Java programming.",
